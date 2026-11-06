@@ -7,8 +7,6 @@
   const uploadError = byId('upload-error');
   const fileList = byId('file-list');
   const draftNotice = byId('draft-notice');
-  const operationalInfo = byId('operational-info');
-  const charCount = byId('char-count');
   const dialog = byId('demo-dialog');
   const dialogTitle = byId('dialog-title');
   const dialogBody = byId('dialog-body');
@@ -68,13 +66,6 @@
       dialogTrigger.focus({ preventScroll: true });
     }
   });
-
-  function updateCount() {
-    operationalInfo.value = operationalInfo.value.slice(0, 100);
-    charCount.textContent = `${operationalInfo.value.length} / 100`;
-  }
-
-  operationalInfo.addEventListener('input', updateCount);
 
   function showDraftNotice() {
     draftNotice.replaceChildren();
@@ -199,7 +190,6 @@
     try {
       localStorage.setItem(draftKey, JSON.stringify({
         version: 1,
-        operationalInfo: operationalInfo.value,
         files: [...pendingDraftFiles, ...selected]
       }));
       showToast('草稿已保存至当前浏览器，刷新后图片需重新选择');
@@ -209,7 +199,6 @@
   });
 
   byId('confirm-submit').addEventListener('click', () => {
-    updateCount();
     if (!files.length) {
       showErrors(['请先上传至少一张 JPG 或 PNG 资质图片']);
       uploadZone.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -221,7 +210,7 @@
     icon.setAttribute('aria-hidden', 'true');
     openDialog('提交演示完成', [
       icon,
-      paragraph(`已确认 ${files.length} 张资质图片${operationalInfo.value ? '及公司运营信息' : ''}。`),
+      paragraph(`已确认 ${files.length} 张资质图片。`),
       paragraph('本页面为交互演示，资料未上传至得物，未执行真实信息识别或平台审核。')
     ], '返回查看');
   });
@@ -232,7 +221,7 @@
     rules: ['入驻规则', '入驻规则入口演示，实际经营要求与资质规则以正式商家后台为准。'],
     report: ['举报', '举报入口演示，本页面不会发起真实举报。'],
     logout: ['退出', '当前为入驻页面演示，无需登录，也不会操作您的得物账号。'],
-    video: ['查看入驻视频', '入驻视频入口演示。您可在本页体验资料上传、运营信息填写和提交演示。'],
+    video: ['查看入驻视频', '入驻视频入口演示。您可在本页体验资料上传和提交演示。'],
     service: ['商家客服', '客服入口演示，本页面不会建立真实客服会话。'],
     feedback: ['意见反馈', '反馈入口演示，本页面不会向得物发送消息或反馈。']
   };
@@ -267,18 +256,14 @@
 
   try {
     const stored = JSON.parse(localStorage.getItem(draftKey) || 'null');
-    if (stored && typeof stored.operationalInfo === 'string') {
-      operationalInfo.value = stored.operationalInfo.slice(0, 100);
-      if (Array.isArray(stored.files)) {
-        pendingDraftFiles = stored.files
-          .filter((file) => file && typeof file.name === 'string' && typeof file.size === 'number')
-          .map((file) => ({ name: file.name, size: file.size, type: String(file.type || '') }));
-      }
+    if (stored && Array.isArray(stored.files)) {
+      pendingDraftFiles = stored.files
+        .filter((file) => file && typeof file.name === 'string' && typeof file.size === 'number')
+        .map((file) => ({ name: file.name, size: file.size, type: String(file.type || '') }));
     }
   } catch {
     // An unavailable or invalid local draft should not prevent using the page.
   }
-  updateCount();
   showDraftNotice();
 
   window.addEventListener('pagehide', (event) => {
