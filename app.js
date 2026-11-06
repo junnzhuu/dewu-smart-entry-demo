@@ -80,7 +80,7 @@
     draftNotice.replaceChildren();
     draftNotice.hidden = pendingDraftFiles.length === 0;
     if (!pendingDraftFiles.length) return;
-    draftNotice.append(element('p', 'draft-hint',
+    draftNotice.append(element('p', '',
       `已恢复本地草稿。以下图片需重新选择：${pendingDraftFiles.map((file) => file.name).join('、')}`));
   }
 
