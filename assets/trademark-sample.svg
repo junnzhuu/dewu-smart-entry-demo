@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="430" viewBox="0 0 300 430" role="img" aria-label="已脱敏的商标注册证样例，仅供页面演示">
+  <defs>
+    <pattern id="paper" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M0 3h6M3 0v6" stroke="#eae9e3" stroke-width=".15" opacity=".3"/></pattern>
+    <g id="star"><path d="M0-6 1.8-1.9 6.3-1.9 2.8.9 4.1 5.3 0 2.7-4.1 5.3-2.8.9-6.3-1.9-1.8-1.9Z" fill="#ffdf38"/></g>
+    <g id="redacted"><rect width="20" height="8" fill="#d2d2d2"/><rect x="20" width="9" height="8" fill="#b9b9b9"/><rect x="29" width="17" height="8" fill="#dedede"/><rect x="46" width="13" height="8" fill="#c8c8c8"/><rect x="59" width="19" height="8" fill="#e4e4e4"/></g>
+  </defs>
+  <rect x="1.5" y="1.5" width="297" height="427" fill="#fffefc" stroke="#1245e9" stroke-width="2.5"/>
+  <rect x="4" y="4" width="292" height="422" fill="url(#paper)"/>
+  <use href="#redacted" x="7" y="16" transform="translate(0 0) scale(1.1 1)"/>
+  <text x="213" y="24" font-family="Songti SC, STSong, serif" font-size="8" fill="#777">第</text><rect x="229" y="16" width="36" height="8" fill="#dedede"/><text x="279" y="24" font-family="Songti SC, STSong, serif" font-size="8" fill="#777">号</text>
+  <g transform="translate(150 43)">
+    <ellipse rx="31" ry="34" fill="#edc629"/>
+    <ellipse rx="25" ry="28" fill="#e92728"/>
+    <path d="M-25 15Q0 39 25 15M-26 11Q0 34 26 11" fill="none" stroke="#f5d438" stroke-width="2"/>
+    <use href="#star" x="0" y="-14"/>
+    <use href="#star" transform="translate(-13 -6) scale(.4)"/><use href="#star" transform="translate(13 -6) scale(.4)"/>
+    <use href="#star" transform="translate(-17 3) scale(.35)"/><use href="#star" transform="translate(17 3) scale(.35)"/>
+    <path d="M-17 12H17V17H-17ZM-13 8H13V12H-13ZM-10 4H10V8H-10Z" fill="#f4cf34"/>
+    <path d="M-29-9Q-36 6-24 24M29-9Q36 6 24 24" fill="none" stroke="#e6aa1d" stroke-width="3"/>
+    <path d="M-28-4l-6-3m7 11-7-1m9 9-7 2M28-4l6-3m-7 11 7-1m-9 9 7 2" stroke="#e6aa1d" stroke-width="2"/>
+  </g>
+  <text x="150" y="101" text-anchor="middle" font-family="Songti SC, STSong, SimSun, serif" font-size="15" font-weight="700" letter-spacing="7" fill="#111">商标注册证</text>
+  <rect x="97" y="125" width="108" height="55" rx="1.5" fill="none" stroke="#ff4c4d" stroke-width="2.2"/>
+  <g transform="translate(117 147)"><rect width="9" height="15" fill="#ddd"/><rect x="9" width="11" height="15" fill="#c9c9c9"/><rect x="20" width="10" height="15" fill="#e7e7e7"/><rect x="30" width="8" height="15" fill="#c3c3c3"/><rect x="38" width="12" height="15" fill="#ddd"/><rect x="50" width="13" height="15" fill="#e4e4e4"/></g>
+  <text x="5" y="219" font-family="Songti SC, STSong, SimSun, serif" font-size="9" font-weight="600" fill="#222">核定使用商品/服务项目（国际分类：　）</text>
+  <g transform="translate(6 226)"><use href="#redacted"/><use href="#redacted" x="78"/><use href="#redacted" x="156"/><rect x="234" width="49" height="8" fill="#d1d1d1"/></g>
+  <g font-family="Songti SC, STSong, SimSun, serif" font-size="9" fill="#222">
+    <text x="5" y="275" letter-spacing="5">注册人</text>
+    <text x="5" y="315">注册人地址</text>
+    <text x="5" y="363">注册日期</text>
+    <text x="173" y="363">有效期至</text>
+    <text x="5" y="380" letter-spacing="5">局　长</text>
+    <text x="173" y="405" letter-spacing="4">发证机关</text>
+  </g>
+  <g transform="translate(62 267)"><use href="#redacted"/><rect x="78" width="15" height="8" fill="#d5d5d5"/></g>
+  <g transform="translate(62 307)"><use href="#redacted"/><use href="#redacted" x="78"/><rect x="156" width="38" height="8" fill="#e2e2e2"/></g>
+  <g transform="translate(62 355)"><use href="#redacted"/><rect x="161" width="49" height="8" fill="#d6d6d6"/></g>
+  <g transform="translate(19 385)"><rect width="15" height="15" fill="#d1d1d1"/><rect x="15" width="13" height="15" fill="#c0c0c0"/><rect x="28" width="22" height="15" fill="#ddd"/><rect y="15" width="23" height="15" fill="#bbb"/><rect x="23" y="15" width="25" height="15" fill="#e6e6e6"/></g>
+  <g transform="translate(258 379) rotate(-17)" fill="none" stroke="#e63e3f">
+    <circle r="31" stroke-width="2.3"/><circle r="26" stroke-width=".8"/>
+    <path d="M0-12 3.4-4 12-4 5.2 1.7 7.8 10.5 0 5.3-7.8 10.5-5.2 1.7-12-4-3.4-4Z" fill="#e63e3f" stroke="none"/>
+    <path d="M-18 15H18" stroke-width=".8"/>
+    <text x="0" y="-17" text-anchor="middle" font-family="Songti SC, STSong, serif" font-size="7" fill="#e63e3f" stroke="none" letter-spacing="2">商标资质样例</text>
+    <text x="0" y="23" text-anchor="middle" font-family="Songti SC, STSong, serif" font-size="6" fill="#e63e3f" stroke="none" letter-spacing="1">页面演示</text>
+  </g>
+  <text x="150" y="421" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#aaa">已脱敏示例 · 仅供页面演示</text>
+</svg>
